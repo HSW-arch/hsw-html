@@ -20,12 +20,12 @@
 .pd-desc{font-size:.95rem;color:var(--brand-gray);line-height:1.75;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--brand-accent)}
 .pd-custom-tag{display:inline-block;background:var(--brand-blue);color:#fff;padding:7px 16px;border-radius:6px;font-size:.78rem;font-weight:600;margin-bottom:28px}
 .pd-specs-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-gray);margin-bottom:12px}
-.pd-specs{width:100%;border-collapse:collapse;border-radius:8px;overflow:hidden;border:1px solid var(--brand-accent)}
-.pd-specs tr:nth-child(odd){background:#f8f9fb}
-.pd-specs td{padding:13px 16px;font-size:.875rem;vertical-align:middle;border-bottom:1px solid var(--brand-accent)}
-.pd-specs td:first-child{font-weight:600;color:var(--brand-blue-dark);width:36%;white-space:nowrap;border-right:1px solid var(--brand-accent);vertical-align:middle}
-.pd-specs td:last-child{color:#444;line-height:1.5}
-.pd-specs tr:last-child td{border-bottom:none}
+.pd-specs{width:100%;border:1px solid var(--brand-accent);border-radius:8px;overflow:hidden;font-size:.875rem}
+.pd-specs-row{display:flex;align-items:stretch;border-bottom:1px solid var(--brand-accent)}
+.pd-specs-row:last-child{border-bottom:none}
+.pd-specs-row:nth-child(odd){background:#f8f9fb}
+.pd-specs-label{flex:0 0 38%;padding:13px 16px;font-weight:600;color:var(--brand-blue-dark);border-right:1px solid var(--brand-accent);display:flex;align-items:center}
+.pd-specs-value{flex:1;padding:13px 16px;color:#444;line-height:1.5;display:flex;align-items:center}
 .pd-actions{margin-top:28px;padding-top:24px;border-top:1px solid var(--brand-accent);display:flex;flex-direction:column;gap:14px}
 .pd-btn-primary{display:block;text-align:center;padding:14px 24px;background:var(--brand-blue);color:#fff;border-radius:7px;font-size:.9rem;font-weight:600;transition:.2s}
 .pd-btn-primary:hover{background:var(--brand-blue-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,58,92,.2)}
@@ -72,12 +72,12 @@
       <div class="pd-custom-tag" style="margin-bottom:0" data-en="Custom Sizes Only" data-zh="仅支持定制尺寸">Custom Sizes Only</div>
       <p class="pd-specs-title" style="margin-bottom:0" data-en="Technical Specifications" data-zh="技术规格">Technical Specifications</p>
     </div>
-    <table class="pd-specs">
-      <tr><td data-en="Material" data-zh="材质">Material</td><td>Plastic Steel</td></tr>
-      <tr><td data-en="Size Range" data-zh="尺寸范围">Size Range</td><td>Custom size available</td></tr>
-      <tr><td data-en="Surface Finish" data-zh="表面处理">Surface Finish</td><td>Electrostatic Spraying (Customizable)</td></tr>
-      <tr><td data-en="Custom Options" data-zh="定制选项">Custom Options</td><td>Hood style, length, color</td></tr>
-    </table>
+    <div class="pd-specs">
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Material" data-zh="材质">Material</div><div class="pd-specs-value">Plastic Steel</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Size Range" data-zh="尺寸范围">Size Range</div><div class="pd-specs-value">Custom size available</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Surface Finish" data-zh="表面处理">Surface Finish</div><div class="pd-specs-value">Electrostatic Spraying (Customizable)</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Custom Options" data-zh="定制选项">Custom Options</div><div class="pd-specs-value">Hood style, length, color</div></div>
+    </div>
 
     <div class="pd-actions">
       <a href="../contact.html" class="pd-btn-primary" data-en="Inquire Now" data-zh="立即询价">Inquire Now</a>
