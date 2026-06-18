@@ -6,6 +6,47 @@
 <title>FK-0020 Iron Deflection Adjustable Vent Grille - HSW</title>
 <meta name="description" content="Heavy-duty galvanized iron adjustable vent grille for industrial and commercial ventilation.">
 <link rel="stylesheet" href="../style.css">
+<style>
+/* ===== Product Detail Overrides ===== */
+.pd-wrap{max-width:1200px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:768px){.pd-wrap{grid-template-columns:1fr;gap:32px;padding:32px 16px}}
+
+/* Image panel */
+.pd-img-panel{position:sticky;top:96px}
+.pd-img-box{background:#f8f9fb;border-radius:12px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;border:1px solid #e8ecf1}
+.pd-img-box img{width:100%;height:100%;object-fit:contain;padding:24px}
+.pd-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#9aacbb}
+.pd-img-placeholder svg{width:48px;height:48px;opacity:.4}
+.pd-img-placeholder span{font-size:.85rem}
+
+/* Right panel */
+.pd-info-panel{}
+.pd-model{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-blue);background:#e8f0f8;padding:4px 12px;border-radius:4px;margin-bottom:12px}
+.pd-title{font-size:1.75rem;font-weight:700;color:var(--brand-blue-dark);line-height:1.25;margin-bottom:16px}
+.pd-desc{font-size:.95rem;color:var(--brand-gray);line-height:1.75;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--brand-accent)}
+.pd-custom-tag{display:inline-flex;align-items:center;gap:6px;background:var(--brand-blue);color:#fff;padding:7px 16px;border-radius:6px;font-size:.78rem;font-weight:600;letter-spacing:.02em;margin-bottom:28px}
+.pd-custom-tag::before{content:"鉁?;font-size:.7rem;opacity:.8}
+
+/* Specs table redesign */
+.pd-specs-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-gray);margin-bottom:12px}
+.pd-specs{width:100%;border-collapse:collapse;border-radius:8px;overflow:hidden;border:1px solid var(--brand-accent)}
+.pd-specs tr:nth-child(odd){background:#f8f9fb}
+.pd-specs tr:nth-child(even){background:#fff}
+.pd-specs td{padding:13px 16px;font-size:.875rem;vertical-align:top}
+.pd-specs td:first-child{font-weight:600;color:var(--brand-blue-dark);width:38%;white-space:nowrap;border-right:1px solid var(--brand-accent)}
+.pd-specs td:last-child{color:#444;line-height:1.5}
+.pd-specs tr:last-child td{border-bottom:none}
+
+/* Actions */
+.pd-actions{margin-top:28px;padding-top:24px;border-top:1px solid var(--brand-accent);display:flex;flex-direction:column;gap:12px}
+.pd-btn-primary{display:block;text-align:center;padding:14px 24px;background:var(--brand-blue);color:#fff;border-radius:7px;font-size:.9rem;font-weight:600;letter-spacing:.01em;transition:.2s}
+.pd-btn-primary:hover{background:var(--brand-blue-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,58,92,.2)}
+.pd-contact-info{background:#f8f9fb;border-radius:8px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pd-contact-item{font-size:.78rem}
+.pd-contact-item span:first-child{display:block;color:var(--brand-gray);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.65rem;margin-bottom:2px}
+.pd-contact-item a,.pd-contact-item span:last-child{color:var(--brand-blue-dark);font-weight:500}
+.pd-contact-item a:hover{color:var(--brand-blue)}
+</style>
 </head>
 <body>
 <header><div class="header-inner">
@@ -20,35 +61,80 @@
 <button class="lang-btn" onclick="toggleLang()" data-en="&#20013;&#25991;" data-zh="English">&#20013;&#25991;</button>
 </nav>
 </div></header>
+
 <main>
+<!-- Breadcrumb -->
 <nav class="breadcrumb"><div class="section-inner">
 <a href="../index.html" data-en="Home" data-zh="&#39318;&#39029;">Home</a> /
 <a href="../products.html" data-en="Products" data-zh="&#20135;&#21697;&#20013;&#24515;">Products</a> /
+<a href="../products.html#grilles" data-en="Air Grilles" data-zh="Air Grilles">Air Grilles</a> /
 <span>FK-0020 Iron Deflection Adjustable Vent Grille</span>
 </div></nav>
-<section class="bg-dark" style="padding:40px 24px">
-<div class="section-inner">
-<span class="tag" data-en="Air Grilles" data-zh="Air Grilles">Air Grilles</span>
-<h1 class="section-title" style="color:#fff;margin-top:16px">FK-0020 Iron Deflection Adjustable Vent Grille</h1>
-<p style="color:var(--brand-gray-light);font-size:1rem;margin-top:8px">Heavy-duty galvanized iron adjustable vent grille for industrial and commercial ventilation.</p>
-</div>
-</section>
-<div class="prod-detail">
-<div><div class='prod-img' style='display:flex;align-items:center;justify-content:center;height:400px;background:#f5f6f8;border-radius:8px;border:2px dashed #e8ecf1'><span style='color:#6b7d8e;font-size:.9rem'>Image coming soon</span></div></div>
-<div>
-<span class="tag" data-en="Customized Sizes Available" data-zh="&#23457;&#23383;&#23450;&#21046;">Customized Sizes Available</span>
-<table class="specs-table">
-<tr><td data-en="Material" data-zh="&#26448;&#36136;">Material</td><td>Galvanized Iron</td></tr>
-<tr><td data-en="Size Range" data-zh="&#23457;&#23383;&#33539;&#22260;">Size Range</td><td>Custom size available</td></tr>
-<tr><td data-en="Surface Finish" data-zh="&#34920;&#38754;&#22788;&#29702;">Surface Finish</td><td>Electrostatic Spraying (Customizable)</td></tr>
-<tr><td data-en="Custom Options" data-zh="&#23450;&#21046;&#36873;&#39033;">Custom Options</td><td>Blade pitch, frame size, color</td></tr>
-</table>
-<div class="prod-actions">
-<a href="../contact.html" class="btn btn-dark" data-en="Inquire Now" data-zh="&#31435;&#21363;&#35810;&#20385;">Inquire Now</a>
-</div>
-</div>
+
+<!-- Product Detail -->
+<div class="pd-wrap">
+
+  <!-- LEFT: Image -->
+  <div class="pd-img-panel">
+    <div class='pd-img-box'><div class='pd-img-placeholder'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><polyline points='21 15 16 10 5 21'/></svg><span>Image coming soon</span></div></div>
+  </div>
+
+  <!-- RIGHT: Info -->
+  <div class="pd-info-panel">
+    <div class="pd-model">Air Grilles</div>
+    <h1 class="pd-title">FK-0020 Iron Deflection Adjustable Vent Grille</h1>
+    <p class="pd-desc" data-en="Heavy-duty galvanized iron adjustable vent grille for industrial and commercial ventilation." data-zh="Heavy-duty galvanized iron adjustable vent grille for industrial and commercial ventilation.">Heavy-duty galvanized iron adjustable vent grille for industrial and commercial ventilation.</p>
+
+    <div class="pd-custom-tag" data-en="Customized Sizes Available" data-zh="&#25903;&#25345;&#23450;&#21046;&#23457;&#23383;">Customized Sizes Available</div>
+
+    <!-- Specs -->
+    <p class="pd-specs-title" data-en="Technical Specifications" data-zh="&#25216;&#26415;&#35268;&#26684;">Technical Specifications</p>
+    <table class="pd-specs">
+      <tr>
+        <td data-en="Material" data-zh="&#26448;&#36136;">Material</td>
+        <td>Galvanized Iron</td>
+      </tr>
+      <tr>
+        <td data-en="Size Range" data-zh="&#23457;&#23383;&#33539;&#22260;">Size Range</td>
+        <td>Custom size available</td>
+      </tr>
+      <tr>
+        <td data-en="Surface Finish" data-zh="&#34920;&#38754;&#22788;&#29702;">Surface Finish</td>
+        <td>Electrostatic Spraying (Customizable)</td>
+      </tr>
+      <tr>
+        <td data-en="Custom Options" data-zh="&#23450;&#21046;&#36873;&#39033;">Custom Options</td>
+        <td>Blade pitch, frame size, color</td>
+      </tr>
+    </table>
+
+    <!-- Actions -->
+    <div class="pd-actions">
+      <a href="../contact.html" class="pd-btn-primary" data-en="&#x1F4E8; Inquire Now" data-zh="&#x1F4E8; &#31435;&#21363;&#35810;&#20385;">&#x1F4E8; Inquire Now</a>
+      <div class="pd-contact-info">
+        <div class="pd-contact-item">
+          <span data-en="Email" data-zh="&#37038;&#31665;">Email</span>
+          <a href="mailto:Kevin.zhu@hongshengwei-tech.com">Kevin.zhu@<br>hongshengwei-tech.com</a>
+        </div>
+        <div class="pd-contact-item">
+          <span data-en="Phone" data-zh="&#30005;&#35805;">Phone</span>
+          <span>+86 13411445407</span>
+        </div>
+        <div class="pd-contact-item">
+          <span data-en="Lead Time" data-zh="&#20135;&#26399;">Lead Time</span>
+          <span data-en="7鈥?5 business days" data-zh="7鈥?5 &#24037;&#20316;&#26085;">7鈥?5 business days</span>
+        </div>
+        <div class="pd-contact-item">
+          <span data-en="MOQ" data-zh="&#36215;&#35746;&#37327;">MOQ</span>
+          <span data-en="No minimum" data-zh="&#26080;&#36215;&#35746;&#37327;">No minimum</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 </main>
+
 <footer>
 <div class="footer-inner">
 <div class="footer-col"><h4>HSW</h4><p>Zhongshan Hongshengwei Technology Development Co., Ltd.</p></div>
@@ -60,7 +146,8 @@
 </div>
 <div class="footer-col">
 <h4 data-en="Contact" data-zh="&#32852;&#31995;">Contact</h4>
-<a href="../contact.html">Kevin.zhu@hongshengwei-tech.com</a>
+<a href="mailto:Kevin.zhu@hongshengwei-tech.com">Kevin.zhu@hongshengwei-tech.com</a>
+<a href="tel:+8613411445407">+86 13411445407</a>
 </div>
 </div>
 <div class="footer-bottom">
