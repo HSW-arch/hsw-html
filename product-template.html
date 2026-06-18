@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{NAME_EN}} — HSW</title>
+<meta name="description" content="{{DESC_EN}}">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><div class="header-inner">
+<a href="../index.html" class="logo">HSW</a>
+<button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+<nav class="nav-links">
+<a href="../index.html">Home</a><a href="../products.html">Products</a><a href="../about.html">About</a><a href="../downloads.html">Downloads</a><a href="../contact.html">Contact</a>
+<button class="lang-btn" onclick="toggleLang()" data-en="中文" data-zh="English">中文</button>
+</nav>
+</div></header>
+<main>
+<nav class="breadcrumb"><div class="section-inner"><a href="../index.html" data-en="Home" data-zh="首页">Home</a> / <a href="../products.html" data-en="Products" data-zh="产品中心">Products</a> / <span data-en="{{NAME_EN}}" data-zh="{{NAME_ZH}}">{{NAME_EN}}</span></div></nav>
+<section class="bg-dark" style="padding:40px 24px"><div class="section-inner"><span class="tag" data-en="{{CAT_EN}}" data-zh="{{NAME_ZH}}">{{CAT_EN}}</span><h1 class="section-title" style="color:#fff;margin-top:16px" data-en="{{NAME_EN}}" data-zh="{{NAME_ZH}}">{{NAME_EN}}</h1><p style="color:var(--brand-gray-light);font-size:1rem;margin-top:8px" data-en="{{DESC_EN}}" data-zh="{{DESC_ZH}}">{{DESC_EN}}</p></div></section>
+<div class="prod-detail">
+<div class="prod-img"><span data-en="Product Image" data-zh="产品图片">Product Image</span></div>
+<div>
+<span class="tag" data-en="Customized Sizes Available" data-zh="此产品尺寸为定制">Customized Sizes Available</span>
+<table class="specs-table">
+<tr><td data-en="Material" data-zh="材质">Material</td><td>{{MATERIAL}}</td></tr>
+<tr><td data-en="Size Range" data-zh="尺寸范围">Size Range</td><td>{{SIZE}}</td></tr>
+<tr><td data-en="Surface Finish" data-zh="表面处理">Surface Finish</td><td>{{FINISH}}</td></tr>
+<tr><td data-en="Custom Options" data-zh="定制选项">Custom Options</td><td>{{OPTIONS}}</td></tr>
+</table>
+<div class="prod-actions"><a href="../contact.html" class="btn btn-dark" data-en="Inquire Now" data-zh="立即询价">Inquire Now</a></div>
+</div>
+</div>
+</main>
+<footer><div class="footer-inner"><div class="footer-col"><h4>HSW</h4><p>Precision HVAC air distribution products.</p></div></div><div class="footer-bottom"><p>&copy; 2026 HSW. <span data-en="All rights reserved." data-zh="版权所有。">All rights reserved.</span></p></div></footer>
+<script src="../lang.js"></script>
+</body>
+</html>
