@@ -3,37 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{NAME_EN}} — HSW</title>
+<title>{{NAME_EN}} - HSW</title>
 <meta name="description" content="{{DESC_EN}}">
 <link rel="stylesheet" href="../style.css">
+<style>
+.pd-wrap{max-width:1200px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:768px){.pd-wrap{grid-template-columns:1fr;gap:32px;padding:32px 16px}}
+.pd-img-panel{position:sticky;top:96px}
+.pd-img-box{background:#f8f9fb;border-radius:12px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;border:1px solid #e8ecf1}
+.pd-img-box img{width:100%;height:100%;object-fit:contain;padding:24px}
+.pd-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#9aacbb}
+.pd-img-placeholder svg{width:48px;height:48px;opacity:.4}
+.pd-img-placeholder span{font-size:.85rem}
+    .pd-back-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#f0f4f8;border:1px solid #d0d9e3;border-radius:6px;font-size:.85rem;font-weight:500;color:var(--brand-blue-dark);transition:.2s}
+    .pd-back-btn:hover{background:var(--brand-blue);color:#fff;border-color:var(--brand-blue);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,58,92,.15)}
+    .pd-back-btn svg{width:16px;height:16px}
+.pd-title{font-size:1.75rem;font-weight:700;color:var(--brand-blue-dark);line-height:1.25;margin-bottom:16px}
+.pd-desc{font-size:.95rem;color:var(--brand-gray);line-height:1.75;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--brand-accent)}
+.pd-custom-tag{display:inline-block;background:var(--brand-blue);color:#fff;padding:7px 16px;border-radius:6px;font-size:.78rem;font-weight:600;margin-bottom:28px}
+.pd-specs-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-gray);margin-bottom:12px}
+.pd-specs{width:100%;border:1px solid #d0d9e3;border-radius:8px;overflow:hidden;font-size:.875rem}
+.pd-specs-row{display:flex;min-height:52px;border-bottom:1px solid #d0d9e3}
+.pd-specs-row:last-child{border-bottom:none}
+.pd-specs-row:nth-child(odd){background:#f5f7fa}
+.pd-specs-row:nth-child(even){background:#fff}
+.pd-specs-label{flex:0 0 140px;padding:14px 16px;font-weight:600;font-size:.85rem;color:var(--brand-blue-dark);border-right:2px solid #d0d9e3;display:flex;align-items:center}
+.pd-specs-value{flex:1;padding:14px 20px;color:#333;line-height:1.5;display:flex;align-items:center;font-size:.875rem}
+.pd-actions{margin-top:28px;padding-top:24px;border-top:1px solid var(--brand-accent);display:flex;flex-direction:column;gap:14px}
+.pd-btn-primary{display:block;text-align:center;padding:14px 24px;background:var(--brand-blue);color:#fff;border-radius:7px;font-size:.9rem;font-weight:600;transition:.2s}
+.pd-btn-primary:hover{background:var(--brand-blue-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,58,92,.2)}
+.pd-contact-info{background:#f8f9fb;border-radius:8px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px 8px}
+.pd-contact-item{font-size:.78rem;min-width:0}
+.pd-contact-item .lbl{display:block;color:var(--brand-gray);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.65rem;margin-bottom:3px}
+.pd-contact-item .val,.pd-contact-item a{color:var(--brand-blue-dark);font-weight:500;word-break:break-word}
+.pd-contact-item a:hover{color:var(--brand-blue)}
+</style>
 </head>
 <body>
 <header><div class="header-inner">
 <a href="../index.html" class="logo">HSW</a>
 <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
 <nav class="nav-links">
-<a href="../index.html" data-en="Home" data-zh="首页">Home</a><a href="../products.html" data-en="Products" data-zh="产品中心">Products</a><a href="../about.html" data-en="About" data-zh="关于我们">About</a><a href="../downloads.html" data-en="Downloads" data-zh="下载中心">Downloads</a><a href="../contact.html" data-en="Contact" data-zh="联系我们">Contact</a>
+<a href="../index.html" data-en="Home" data-zh="首页">Home</a>
+<a href="../products.html" data-en="Products" data-zh="产品中心">Products</a>
+<a href="../about.html" data-en="About" data-zh="关于我们">About</a>
+<a href="../downloads.html" data-en="Downloads" data-zh="下载中心">Downloads</a>
+<a href="../contact.html" data-en="Contact" data-zh="联系我们">Contact</a>
 <button class="lang-btn" onclick="toggleLang()" data-en="中文" data-zh="English">中文</button>
 </nav>
 </div></header>
+
 <main>
-<nav class="breadcrumb"><div class="section-inner"><a href="../index.html" data-en="Home" data-zh="首页">Home</a> / <a href="../products.html" data-en="Products" data-zh="产品中心">Products</a> / <span data-en="{{NAME_EN}}" data-zh="{{NAME_ZH}}">{{NAME_EN}}</span></div></nav>
-<section class="bg-dark" style="padding:40px 24px"><div class="section-inner"><span class="tag" data-en="{{CAT_EN}}" data-zh="{{NAME_ZH}}">{{CAT_EN}}</span><h1 class="section-title" style="color:#fff;margin-top:16px" data-en="{{NAME_EN}}" data-zh="{{NAME_ZH}}">{{NAME_EN}}</h1><p style="color:var(--brand-gray-light);font-size:1rem;margin-top:8px" data-en="{{DESC_EN}}" data-zh="{{DESC_ZH}}">{{DESC_EN}}</p></div></section>
-<div class="prod-detail">
-<div class="prod-img"><span data-en="Product Image" data-zh="产品图片">Product Image</span></div>
-<div>
-<span class="tag" data-en="Customized Sizes Available" data-zh="此产品尺寸为定制">Customized Sizes Available</span>
-<table class="specs-table">
-<tr><td data-en="Material" data-zh="材质">Material</td><td>{{MATERIAL}}</td></tr>
-<tr><td data-en="Size Range" data-zh="尺寸范围">Size Range</td><td>{{SIZE}}</td></tr>
-<tr><td data-en="Surface Finish" data-zh="表面处理">Surface Finish</td><td>{{FINISH}}</td></tr>
-<tr><td data-en="Custom Options" data-zh="定制选项">Custom Options</td><td>{{OPTIONS}}</td></tr>
-</table>
-<div class="prod-actions"><a href="../contact.html" class="btn btn-dark" data-en="Inquire Now" data-zh="立即询价">Inquire Now</a></div>
-</div>
+<nav class="breadcrumb"><div class="section-inner">
+<a href="../index.html" data-en="Home" data-zh="首页">Home</a> /
+<a href="../products.html" data-en="Products" data-zh="产品中心">Products</a> /
+<a href="../products.html#{{CATEGORY}}" data-en="{{CAT_EN}}" data-zh="{{CAT_EN}}">{{CAT_EN}}</a> /
+<span>{{NAME_EN}}</span>
+</div></nav>
+
+<div class="pd-wrap">
+  <div class="pd-img-panel">
+    {{PRODUCT_IMAGE}}
+  </div>
+
+  <div class="pd-info-panel">
+    <a href="../products.html" class="pd-back-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><span data-en="Back to Products" data-zh="返回产品中心">Back to Products</span></a>
+    <div class="pd-model">{{CAT_EN}}</div>
+    <h1 class="pd-title">{{NAME_EN}}</h1>
+    <p class="pd-desc">{{DESC_EN}}</p>
+
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+      <div class="pd-custom-tag" style="margin-bottom:0" data-en="Custom Sizes Only" data-zh="仅支持定制尺寸">Custom Sizes Only</div>
+      <p class="pd-specs-title" style="margin-bottom:0" data-en="Technical Specifications" data-zh="技术规格">Technical Specifications</p>
+    </div>
+    <div class="pd-specs">
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Material" data-zh="材质">Material</div><div class="pd-specs-value">{{MATERIAL}}</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Size Range" data-zh="尺寸范围">Size Range</div><div class="pd-specs-value">{{SIZE}}</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Surface Finish" data-zh="表面处理">Surface Finish</div><div class="pd-specs-value">{{FINISH}}</div></div>
+      <div class="pd-specs-row"><div class="pd-specs-label" data-en="Custom Options" data-zh="定制选项">Custom Options</div><div class="pd-specs-value">{{OPTIONS}}</div></div>
+    </div>
+
+    <div class="pd-actions">
+      <a href="../contact.html" class="pd-btn-primary" data-en="Inquire Now" data-zh="立即询价">Inquire Now</a>
+      <div class="pd-contact-info">
+        <div class="pd-contact-item">
+          <span class="lbl" data-en="Email" data-zh="邮箱">Email</span>
+          <a href="mailto:Kevin.zhu@hongshengwei-tech.com">Kevin.zhu@hongshengwei-tech.com</a>
+        </div>
+        <div class="pd-contact-item">
+          <span class="lbl" data-en="Phone" data-zh="电话">Phone</span>
+          <span class="val">+86 13411445407</span>
+        </div>
+        <div class="pd-contact-item">
+          <span class="lbl" data-en="Lead Time" data-zh="交货期">Lead Time</span>
+          <span class="val" data-en="7-15 business days" data-zh="7-15 个工作日">7-15 business days</span>
+        </div>
+        <div class="pd-contact-item">
+          <span class="lbl" data-en="MOQ" data-zh="起订量">MOQ</span>
+          <span class="val" data-en="No minimum" data-zh="无起订量">No minimum</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </main>
-<footer><div class="footer-inner"><div class="footer-col"><h4>HSW</h4><p>Precision HVAC air distribution products.</p></div></div><div class="footer-bottom"><p>&copy; 2026 HSW. <span data-en="All rights reserved." data-zh="版权所有。">All rights reserved.</span></p></div></footer>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>HSW</h4><p>Zhongshan Hongshengwei Technology Development Co., Ltd.</p></div>
+<div class="footer-col">
+<h4 data-en="Products" data-zh="产品">Products</h4>
+<a href="../products.html#grilles" data-en="Air Grilles" data-zh="风口格栅">Air Grilles</a>
+<a href="../products.html#ducts" data-en="Air Ducts" data-zh="风管">Air Ducts</a>
+<a href="../products.html#dampers" data-en="Air Dampers" data-zh="风阀">Air Dampers</a>
+</div>
+<div class="footer-col">
+<h4 data-en="Contact" data-zh="联系">Contact</h4>
+<a href="mailto:Kevin.zhu@hongshengwei-tech.com">Kevin.zhu@hongshengwei-tech.com</a>
+<a href="tel:+8613411445407">+86 13411445407</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Zhongshan Hongshengwei Technology Development Co., Ltd. <span data-en="All rights reserved." data-zh="版权所有。">All rights reserved.</span></p>
+</div>
+</footer>
 <script src="../lang.js"></script>
 </body>
 </html>
