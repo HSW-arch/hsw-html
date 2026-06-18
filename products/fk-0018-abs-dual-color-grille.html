@@ -15,7 +15,9 @@
 .pd-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#9aacbb}
 .pd-img-placeholder svg{width:48px;height:48px;opacity:.4}
 .pd-img-placeholder span{font-size:.85rem}
-.pd-model{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-blue);background:#e8f0f8;padding:4px 12px;border-radius:4px;margin-bottom:12px}
+    .pd-back-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#f0f4f8;border:1px solid #d0d9e3;border-radius:6px;font-size:.85rem;font-weight:500;color:var(--brand-blue-dark);transition:.2s}
+    .pd-back-btn:hover{background:var(--brand-blue);color:#fff;border-color:var(--brand-blue);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,58,92,.15)}
+    .pd-back-btn svg{width:16px;height:16px}
 .pd-title{font-size:1.75rem;font-weight:700;color:var(--brand-blue-dark);line-height:1.25;margin-bottom:16px}
 .pd-desc{font-size:.95rem;color:var(--brand-gray);line-height:1.75;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--brand-accent)}
 .pd-custom-tag{display:inline-block;background:var(--brand-blue);color:#fff;padding:7px 16px;border-radius:6px;font-size:.78rem;font-weight:600;margin-bottom:28px}
@@ -65,6 +67,7 @@
   </div>
 
   <div class="pd-info-panel">
+    <a href="../products.html" class="pd-back-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><span data-en="Back to Products" data-zh="返回产品中心">Back to Products</span></a>
     <div class="pd-model">Air Grilles</div>
     <h1 class="pd-title">FK-0018 Invisible Frame ABS Dual-Color Blade Linear Grille</h1>
     <p class="pd-desc">Invisible frame design with dual-color ABS blades. Distinctive aesthetic for modern interiors.</p>
