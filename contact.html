@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — HSW</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="header-inner">
+<a href="index.html" class="logo">HSW</a>
+<button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('open')">&#9776;</button>
+<nav class="nav-links">
+<a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="downloads.html">Downloads</a><a href="contact.html">Contact</a>
+<button class="lang-btn" onclick="toggleLang()" data-en="中文" data-zh="English">中文</button>
+</nav>
+</div></header>
+<main>
+<section class="bg-dark"><div class="section-inner"><h1 class="section-title" style="color:#fff" data-en="Contact Us" data-zh="联系我们">Contact Us</h1><p style="color:var(--brand-gray-light);font-size:1.1rem" data-en="Tell us about your project. We respond within 24 hours." data-zh="告诉我们您的需求，我们将在 24 小时内回复。">Tell us about your project. We respond within 24 hours.</p></div></section>
+<section><div class="section-inner" style="max-width:600px">
+<form action="https://formspree.io/f/mojzzvqd" method="POST">
+<div class="form-group"><label data-en="Your Name" data-zh="姓名">Your Name</label><input type="text" name="name" required></div>
+<div class="form-group"><label data-en="Email Address" data-zh="邮箱地址">Email Address</label><input type="email" name="email" required></div>
+<div class="form-group"><label data-en="Your Message" data-zh="您的需求">Your Message</label><textarea name="message" rows="6" required></textarea></div>
+<button type="submit" class="btn btn-dark" style="width:100%" data-en="Send Inquiry" data-zh="发送询盘">Send Inquiry</button>
+</form>
+</div></section>
+</main>
+<footer><div class="footer-inner"><div class="footer-col"><h4>HSW</h4><p>Precision HVAC air distribution products.</p></div></div><div class="footer-bottom"><p>&copy; 2026 HSW. <span data-en="All rights reserved." data-zh="版权所有。">All rights reserved.</span></p></div></footer>
+<script src="lang.js"></script>
+</body>
+</html>
